@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\Xamarin.iOS10</OutputPath>
+    <OutputPath>bin\Xamarin.iOS10</OutputPath>
     <IntermediateOutputPath>obj\Debug\Xamarin.iOS10</IntermediateOutputPath>
     <DefineConstants>DEBUG;UIKIT;UNIFIED</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -27,7 +27,7 @@
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <DefineConstants>UIKIT;UNIFIED</DefineConstants>
-    <OutputPath>bin\Release\Xamarin.iOS10</OutputPath>
+    <OutputPath>bin\Xamarin.iOS10</OutputPath>
     <IntermediateOutputPath>obj\Release\Xamarin.iOS10</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
