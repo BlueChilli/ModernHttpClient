@@ -135,7 +135,7 @@ namespace ModernHttpClient
                 }
             } catch (IOException ex) {
                 if (ex.Message.ToLowerInvariant().Contains("canceled")) {
-                    throw new OperationCanceledException();
+                    throw new System.OperationCanceledException();
                 }
 
                 throw;
@@ -276,13 +276,8 @@ namespace ModernHttpClient
         /// <param name="session"></param>
         static bool verifyClientCiphers(string hostname, ISSLSession session)
         {
-            var callback = ServicePointManager.ClientCipherSuitesCallback;
-            if (callback == null) return true;
 
-            var protocol = session.Protocol.StartsWith("SSL", StringComparison.InvariantCulture) ? SecurityProtocolType.Ssl3 : SecurityProtocolType.Tls;
-            var acceptedCiphers = callback(protocol, new[] { session.CipherSuite });
-
-            return acceptedCiphers.Contains(session.CipherSuite);
+            return true;
         }
     }
 }
