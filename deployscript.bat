@@ -6,6 +6,8 @@ IF [%COMMITCOMMENT%] EQU [""] goto :nocomment
 
 @ECHO ON
 
+rm *.nupkg
+
 ..\xxcopy "src\ModernHttpClient\bin\**\*.*" "lib\" /R /s /y
 
 nuget pack "ModernHttpClient.nuspec"
