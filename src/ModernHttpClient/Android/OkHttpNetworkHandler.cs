@@ -38,7 +38,13 @@ namespace ModernHttpClient
 
             if (customSSLVerification) client.SetHostnameVerifier(new HostnameVerifier());
             noCacheCacheControl = (new CacheControl.Builder()).NoCache().Build();
-        }
+            // If less than Android Lollipop
+            var androidVersion = (int) Build.VERSION.SdkInt;
+ 			if (androidVersion < 21)
+            {
+                client.SetSslSocketFactory(new TlsSSLSocketFactory());
+            }
+       }
 
         public void RegisterForProgress(HttpRequestMessage request, ProgressDelegate callback)
         {
