@@ -6,7 +6,7 @@ IF [%COMMITCOMMENT%] EQU [""] goto :nocomment
 
 @ECHO ON
 
-rm *.nupkg
+del *.nupkg
 
 ..\xxcopy "src\ModernHttpClient\bin\**\*.*" "lib\" /R /s /y
 
