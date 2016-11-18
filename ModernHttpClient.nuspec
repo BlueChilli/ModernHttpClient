@@ -13,14 +13,15 @@
     <summary>Write your app using System.Net.Http, but drop this library in and it will go drastically faster.</summary>
     <copyright>Copyright Paul Betts © 2012</copyright>
     <dependencies>
-      <group targetFramework="MonoAndroid">
+      <group targetFramework="monoandroid">
         <dependency id="Square.OkHttp" version="2.7.5.0" />
+        <dependency id="Square.OkIO" version="1.10.0.0" />
       </group>
     </dependencies>
   </metadata>
 
   <files>
-    <file src="build\Monoandroid\*.*" target="lib\Monoandroid" />
-    <file src="build\Xamarin.iOS10\*.*" target="lib\Xamarin.iOS10" />
+    <file src="lib\MonoAndroid\*.*" target="lib\MonoAndroid" />
+    <file src="lib\Xamarin.iOS10\*.*" target="lib\Xamarin.iOS10" />
   </files>
 </package>
