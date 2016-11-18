@@ -20,6 +20,7 @@
   </metadata>
 
   <files>
-    <file src="build/**/*.*" target="lib" />
+    <file src="build\Monoandroid\*.*" target="lib\Monoandroid" />
+    <file src="build\Xamarin.iOS10\*.*" target="lib\Xamarin.iOS10" />
   </files>
 </package>
