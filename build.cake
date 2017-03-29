@@ -191,6 +191,7 @@ Action<string,string> build = (solution, configuration) =>
 				.SetVerbosity(Verbosity.Minimal)
 				.SetNodeReuse(false);
 
+				settings.ToolVersion = MSBuildToolVersion.VS2015;
 				var msBuildLogger = GetMSBuildLoggerArguments();
 			
 				if(!string.IsNullOrEmpty(msBuildLogger)) 
@@ -284,10 +285,10 @@ Task("Package")
 		foreach(var package in packageWhitelist)
 		{
 			// only push the package which was created during this build run.
-			var packagePath = string.Format("./Refit/{0}.nuspec", package);
+			var packagePath = string.Format("./{0}.nuspec", package);
 
 			// Push the package.
-			Package(packagePath, "./Refit");
+			Package(packagePath, "./src/ModernHttpClient");
 		}
 	};
 

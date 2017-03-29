@@ -21,7 +21,7 @@
   </metadata>
 
   <files>
-    <file src="lib\MonoAndroid\*.*" target="lib\MonoAndroid" />
-    <file src="lib\Xamarin.iOS10\*.*" target="lib\Xamarin.iOS10" />
+    <file src="bin\MonoAndroid\*.*" target="lib\MonoAndroid" />
+    <file src="bin\Xamarin.iOS10\*.*" target="lib\Xamarin.iOS10" />
   </files>
 </package>
